@@ -1,5 +1,12 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vh;
+    max-height: 100vh;
 }
 
 
@@ -26,18 +33,23 @@ a:active {
 a:hover {
     text-decoration: none;
     color: #3f464d;
+    cursor: pointer;
 }
+
 
 .inner {
     width: 100%;
-    margin: 0, auto;
+    height: 100%;
 }
+
+/* header */
 
 .head--container {
     width: 1000px;
     margin: auto 10px;
     height: 100%;
     display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
     background-image: url(https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png);
 }
@@ -46,13 +58,23 @@ a:hover {
     font-weight: bold;
 }
 
+/* section */
+
+.section--container {
+    display: flex;
+    padding: 20px;
+}
+
+/* nav */
+
 .nav--container {
+    display: flex;
+    flex-direction: column;
     width: 170px;
     font-size: 13px;
     border: 2px solid lightgray;
     border-radius: 10px;
-    padding: 10px 10px;
-    margin: 20px;
+    padding: 10px;
 }
 
 .nav--header {
@@ -60,37 +82,32 @@ a:hover {
     justify-content: space-between;
 }
 
-.main--title {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
+.nav--menu {
+    margin-top: 10px;
 }
 
-.main--title--name {
-    font-weight: bold;
-}
-
-.nav--and--title {
-    display: flex;
-    align-items: flex-start;
-}
-
-.roadmap--container {
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.section--all {
-    display: flex;
-}
-
-/* ================================ */
+/* article */
 
 .article--container {
     display: flex;
     flex-direction: column;
     border: 1px solid blueviolet;
     width: 730px;
+}
+
+.content--list--container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main--title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.main--title--name {
+    font-weight: bold;
 }
 
 .content--list {
@@ -101,11 +118,12 @@ a:hover {
 }
 
 .content--info {
-    width: 45%;
-    height: 45%;
+    width: 25%;
+    height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     
 }
@@ -113,8 +131,11 @@ a:hover {
     width: 170px;
     padding: 10px;
     overflow: hidden;
-    text-overflow: ellipsiss;
+    text-overflow: ellipsis;
 }
 
-
-
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
